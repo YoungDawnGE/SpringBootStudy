@@ -36,3 +36,22 @@ person:
     age: 2
 
 
+spring:
+  profiles:
+    active: test
+
+---
+
+
+server:
+  port: 8080
+# 起个名字
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8082
+# 起个名字
+spring:
+  profiles: test
