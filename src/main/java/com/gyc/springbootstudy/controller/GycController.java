@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/gyc")
 public class GycController {
+
+
     @GetMapping("/hello")
     @ResponseBody
     public String hello() {
         return "hello world";
     }
+
 }

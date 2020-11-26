@@ -1,0 +1,62 @@
+# 格式 key:空格value
+
+# 看哪些类配置成功了debug: true
+#debug: true
+#trace: true
+
+
+server:
+  port: 8082
+
+# 对象
+# --普通写法
+student:
+  name: gyc
+  age: 18
+# --行内写法
+teacher: {name: lj,age: 45}
+
+# 数组
+# --普通写法
+pet:
+  - cat
+  - dog
+  - pig
+# --行内写法
+pet2: [cat,dog,pig]
+
+
+# 给Person对象赋值
+person:
+  name: gyc
+  age: 18
+  isHappy: true
+  birth: 1997/01/01
+  map: {k1: v1,k2: v2}
+  list:
+    - hr
+    - mjy
+  dog:
+    name: Bob
+    age: 2
+
+
+spring:
+  profiles:
+    active: test
+
+---
+
+
+server:
+  port: 8080
+# 起个名字
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8082
+# 起个名字
+spring:
+  profiles: test
