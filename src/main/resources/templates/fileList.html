@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>GYC IS GOD</title>
+</head>
+<body>
+下载文件
+<div th:each="fileName:${fileList}">
+    <a th:href="@{/file/download/{var}(var=${fileName})}" >[[ ${fileName} ]]</a>
+</div>
+</body>
+</html>

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>GYC IS GOD</title>
 </head>
 <body>
 
-<h1>首页</h1>
-<h2>下载</h2>
-<a href="/file/download/platform-tools_r30.0.5-linux.zip" download>下载platform-tools</a>
+不转译
+<div th:text="${msg}"></div>
+转译
+<div th:utext="${msg}"></div>
+循环
+<!--<h3 th:each="user:${list}" th:text="${user}"></h3>-->
+<h3 th:each="user:${list}">[[${user}]]</h3>
 </body>
+</html>
