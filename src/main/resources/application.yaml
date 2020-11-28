@@ -2,9 +2,22 @@ server:
   port: 8082
 
 # 要被客户下载文件保存在了fileDownload中
+
+#spingbootstudy同级的fileDownload
 #file:
 #  file-dir: ../fileDownload/
 
+
+
+#spingbootstudy下的fileDownload
+#file:
+#  file-dir: fileDownload/
+
+# movie的地址
 file:
-  file-dir: fileDownload/
+  file-dir: ../../../../../Game/英雄时刻/
+
+spring:
+  messages:
+    basename: i18n.login
 
