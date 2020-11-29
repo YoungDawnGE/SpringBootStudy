@@ -1,6 +1,7 @@
 package com.gyc.springbootstudy.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -24,7 +25,13 @@ public class GycWebMvcConfigurer implements WebMvcConfigurer {
 
     }
 
-    //视图跳转  也可以和Controller  实现一样的功能
+    //这个是增加拦截器的
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**");
+//    }
+
+    //视图跳转  也可以和Controller  实现一样的功能，但是比Controller方便
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/down").setViewName("download");
