@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: gyc
+    password: GYCgyc123???
+    url: jdbc:mysql://192.168.253.128:3306/gycdb_02
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource

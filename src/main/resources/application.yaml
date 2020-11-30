@@ -10,12 +10,12 @@ server:
 
 
 #spingbootstudy下的fileDownload
-#file:
-#  file-dir: fileDownload/
+file:
+  file-dir: fileDownload/
 
 # movie的地址
-file:
-  file-dir: ../../../../../Game/英雄时刻/
+#file:
+#  file-dir: ../../../../../Game/英雄时刻/
 
 spring:
   messages:
