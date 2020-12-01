@@ -1,7 +1,6 @@
 package com.gyc.springbootdata.mapper;
 
 import com.gyc.springbootdata.pojo.Student;
-import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -19,7 +18,7 @@ import java.util.List;
 public interface StudentMapper {
     List<Student> getAllStudents();
 
-    User getStudentById(int id);
+    Student getStudentById(int id);
 
     int addStudent(Student student);
 

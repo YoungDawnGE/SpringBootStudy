@@ -55,13 +55,6 @@
             <version>1.2.17</version>
         </dependency>
 
-        <!--Junit-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <!--javax:servlet,自己配置druid需要servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -69,11 +62,7 @@
             <version>4.0.1</version>
         </dependency>
 
-        <!--Web依赖: tomcat，dispatcherServlet，xml...-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
 
         <!--这个项目不要tomcat 会报错和 druid的servlet冲突-->
         <!--Tomcat-->
@@ -101,6 +90,12 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
+        </dependency>
+
+        <!--Web依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
 
