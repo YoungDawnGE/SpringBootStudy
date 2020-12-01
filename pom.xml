@@ -16,9 +16,9 @@
     <description>Demo project for Spring Boot</description>
 
     <!--配置子模块-->
-    <modules>
-        <module>springboot-data</module>
-    </modules>
+<!--    <modules>-->
+<!--        <module>springboot-data</module>-->
+<!--    </modules>-->
 
     <properties>
         <java.version>1.8</java.version>

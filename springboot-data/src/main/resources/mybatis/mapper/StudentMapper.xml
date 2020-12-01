@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyc.springbootdata.mapper.StudentMapper">
+    <!--用于数据库字段于pojo字段映射（因为它们字段名不一致），type可以为User也可以为user-->
+    <resultMap id="studentResultMap" type="com.gyc.springbootdata.pojo.Student">
+        <!--id是主键,column是数据库中的名字，property是pojo中的-->
+        <id column="stu_id" property="id"/>
+        <result column="stu_name" property="name"/>
+        <result column="stu_gender" property="gender"/>
+        <result column="stu_major" property="major"/>
+        <result column="stu_phone" property="phone"/>
+    </resultMap>
+
+
+    <select id="getAllStudents" resultMap="studentResultMap">
+        select *
+        from student;
+    </select>
+
+    <select id="getStudentById" resultMap="studentResultMap" parameterType="int">
+        select *
+        from student
+        where stu_id = #{id};
+    </select>
+
+    <insert id="addStudent" parameterType="com.gyc.springbootdata.pojo.Student">
+        insert into student(stu_name, stu_gender, stu_major, stu_phone)
+        values(#{name},#{stu_gender},#{stu_major},#{stu_phone}) ;
+    </insert>
+
+    <update id="updateStudent" parameterType="com.gyc.springbootdata.pojo.Student">
+
+
+    </update>
+
+    <delete id="deleteStudentById" parameterType="int">
+        delete
+        from student
+        where stu_id = #{id};
+    </delete>
+</mapper>

@@ -8,3 +8,9 @@ spring:
 
 server:
   port: 8083
+
+
+# MyBatis
+mybatis:
+  type-aliases-package: com.gyc.springbootdata.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
