@@ -13,7 +13,7 @@ import java.util.HashMap;
 /**
  * Created by GYC
  * 2020/11/29 23:48
- *
+ * <p>
  * 这个xxxConfig东西对应原来的Bean xml配置
  */
 @Configuration
@@ -26,8 +26,9 @@ public class DruidConfig {
 
 
     //druid后台监控
+    @Bean
     public ServletRegistrationBean statViewServlet() {
-        ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "druid/*");
+        ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "druid/*");
         //增加配置  后台登录的账号密码
         HashMap<String, String> map = new HashMap<>();
         map.put("loginUsername", "gyc");//登录的Key是固定的
@@ -35,7 +36,7 @@ public class DruidConfig {
 
         //允许谁可以访问
 //        map.put("allow", "");//如果value为空代表所有人可以访问
-        map.put("allow", "localhost");//localhost代表本机能访问
+        map.put("allow", "");//localhost代表本机能访问
 
         //禁止谁访问 map.put("deny", "192.168.253.128");
 
