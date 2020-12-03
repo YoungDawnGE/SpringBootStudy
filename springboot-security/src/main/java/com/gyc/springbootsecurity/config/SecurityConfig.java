@@ -32,8 +32,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //没有权限跳到登录页面
         http.formLogin();
 
-        //开启注销功能
+        //防止网站工具 get post
+        http.csrf().disable();
+
+        //开启注销功能,logoutSuccessUrl退出后回到的页面
         http.logout().logoutUrl("/logout").logoutSuccessUrl("/");
+
+        //记住cookie, 自动接收前端的参数
+        http.rememberMe().rememberMeParameter("remember");
     }
 
     //认证
